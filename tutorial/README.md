@@ -1,1 +1,1 @@
-本文件夹是对https://cp-algorithms.com网站内容的汉语翻译，并附有部分题解。
+翻译自[原站点](https://cp-algorithms.com)，附有部分题解
