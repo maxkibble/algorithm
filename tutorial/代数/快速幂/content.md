@@ -91,9 +91,9 @@ long long binpow(long long a, long long b) {
 
 #### 带模求幂
 
-**问题：**求 $x^n$ mod $m$，更常见的一个场景是求 $x^{-1}$ mod $m$
+**问题**：求 $x^n$ mod $m$，更常见的一个场景是求 $x^{-1}$ mod $m$
 
-**做法：**$a\cdot b$ 和 $ (a\ mod\ m)\cdot (b\ mod\ m)$ 关于 $m$ 同余，因此可以直接拷贝先前的代码，在每次乘法之后取余即可
+**做法**：$a\cdot b$ 和 $ (a\ mod\ m)\cdot (b\ mod\ m)$ 关于 $m$ 同余，因此可以直接拷贝先前的代码，在每次乘法之后取余即可
 
 ```c++
 long long binpow(long long a, long long b, long long m) {
@@ -109,7 +109,7 @@ long long binpow(long long a, long long b, long long m) {
 }
 ```
 
-**注意：**如果 $m$ 是一个素数，那么根据 [费马小定理](https://en.wikipedia.org/wiki/Fermat's_little_theorem)，$x^n$ 和 $x^{n\ mod\ (m-1)}$ 是关于 $m$ 同余的
+**注意**：如果 $m$ 是一个素数，那么根据 [费马小定理](https://en.wikipedia.org/wiki/Fermat's_little_theorem)，$x^n$ 和 $x^{n\ mod\ (m-1)}$ 是关于 $m$ 同余的
 
 
 
@@ -135,7 +135,10 @@ long long binpow(long long a, long long b, long long m) {
 
 **问题**：给定三维坐标系中的 $n$ 个点 $p_i$，对每个点均施加 $m$ 次操作，每次操作是平移、伸缩、旋转、循环中的一种，其中循环是将一系列操作重复 $k$ 次。如果我们将循环展开，得到总的操作次数是 $length$，要求在 $O(n\cdot length)$ 的复杂度内完成所有操作
 
-**做法**：平移、伸缩（将每维坐标分别乘上一个常数系数）、旋转均是线性操作，循环则是它们的组合，因此所有操作都可以用矩阵描述：
+**做法**：
+
+平移、伸缩（将每维坐标分别乘上一个常数系数）、旋转均是线性操作，循环则是它们的组合，因此所有操作都可以用矩阵描述：
+
 $$
 \left\{
  \begin{matrix}
@@ -146,7 +149,9 @@ $$
   \end{matrix}
   \right\}
 $$
+
 我们需要对三维坐标系建立一个四维的变换矩阵是因为需要一个常数维度来完成平移操作（每维坐标加上特定常数）。进而，一次操作可以表示为：
+
 $$
 \left\{
 	\begin{matrix}
@@ -168,6 +173,7 @@ $$
 	\end{matrix}
 \right\}
 $$
+
 当所有操作都被一个矩阵描述后，每种非循环次数都是常数时间完成，而重复 $k$ 次的循环操作则是一组矩阵乘积的 $k$ 次幂。我们可以预先处理所有操作，时间复杂度为 $O(m\log\ k)$，最后再把总的操作效果施加到 $n$ 个点上，总复杂度 $O(n+m\ \log\ k)$
 
 
