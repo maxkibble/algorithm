@@ -195,6 +195,7 @@ a\cdot b=\left\{
 2\cdot\frac{a-1}{2}\cdot b+b & & {if\ \ a>0\ and\ a\ odd}
 \end{array} \right.
 $$
+
 **注意**：[黑科技](https://cs.stackexchange.com/questions/77016/modular-multiplication)
 
 
