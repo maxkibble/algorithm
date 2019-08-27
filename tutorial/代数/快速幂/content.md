@@ -158,6 +158,7 @@ $$
 		x & y & z & 1
 	\end{matrix}
 \right\}
+
 \left\{
  \begin{matrix}
    a_{11} & a_{12} & a_{13} & a_{14}\\
@@ -166,7 +167,9 @@ $$
    a_{41} & a_{42} & a_{43} & a_{44}\\
   \end{matrix}
   \right\}
+
   = 
+
   \left\{
 	\begin{matrix}
 		x' & y' & z' & 1
