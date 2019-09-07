@@ -123,5 +123,5 @@ int lcm (int a, int b) {
 
 ### 练习题
 
-- [Codechef - GCD and LCM](https://www.codechef.com/problems/FLOW016)
+- ✅ [Codechef - GCD and LCM](https://www.codechef.com/problems/FLOW016)
 
