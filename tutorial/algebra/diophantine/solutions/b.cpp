@@ -63,7 +63,7 @@ int main() {
   } else if (b == 0) {
     if (c % a != 0) cout << "0\n";
     else {
-      ll x = x / a;
+      ll x = c / a;
       if (x >= x1 && x <= x2) {
         cout << y2 - y1 + 1 << "\n";
       } else cout << "0\n";
@@ -106,6 +106,10 @@ int main() {
   Rx[0] = shift(x, x2, dx, false);
   Ly = shift(y, y1, dy, true); 
   Ry = shift(y, y2, dy, false);
+  if (Ly > Ry) {
+    cout << "0\n";
+    return 0;
+  }
   ll lx = (c - Ly * b) / a, rx = (c - Ry * b) / a;
   if (lx > rx) swap(lx, rx);
   Lx[1] = lx, Rx[1] = rx;

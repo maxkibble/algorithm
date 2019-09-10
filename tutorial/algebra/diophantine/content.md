@@ -201,7 +201,7 @@ $$
 
 - ✅ [Spoj - Crucial Equation](http://www.spoj.com/problems/CEQU/)
 - ✅ [SGU 106](http://codeforces.com/problemsets/acmsguru/problem/99999/106)
-- [Codeforces - Ebony and Ivory](http://codeforces.com/contest/633/problem/A)
-- [Codechef - Get AC in one go](https://www.codechef.com/problems/COPR16G)
-- [LightOj - Solutions to an equation](http://www.lightoj.com/volume_showproblem.php?problem=1306)
+- ✅ [Codeforces - Ebony and Ivory](http://codeforces.com/contest/633/problem/A)
+- ✅ [Codechef - Get AC in one go](https://www.codechef.com/problems/COPR16G)
+- ✅ [LightOj - Solutions to an equation](http://www.lightoj.com/volume_showproblem.php?problem=1306)
 
