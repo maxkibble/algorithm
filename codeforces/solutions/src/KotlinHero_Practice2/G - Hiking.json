@@ -1,0 +1,36 @@
+{
+  "name" : "G - Hiking",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "5 9\n10 10\n20 10\n30 1\n31 5\n40 10\n",
+    "output" : "1 2 4 5",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "5 1\n2 3\n5 4\n7 9\n8 10\n10 7\n",
+    "output" : "3 4 5",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/KotlinHero_Practice2",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "KotlinHero_Practice2.TaskG",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.09.05",
+  "contestName" : "Kotlin Heroes: Practice 2",
+  "truncate" : false,
+  "inputClass" : "java.util.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

@@ -1,0 +1,36 @@
+{
+  "name" : "F - One-Based Arithmetic",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "121",
+    "output" : "6",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "32",
+    "output" : "7",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/KotlinHero_Practice2",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "KotlinHero_Practice2.TaskF",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.09.05",
+  "contestName" : "Kotlin Heroes: Practice 2",
+  "truncate" : false,
+  "inputClass" : "java.util.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

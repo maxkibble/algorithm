@@ -1,0 +1,46 @@
+{
+  "name" : "B - Traveling Around the Golden Ring of Berland",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "3\n1 0 0\n",
+    "output" : "1",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "3\n2 0 2\n",
+    "output" : "6",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "5\n0 3 1 3 2\n",
+    "output" : "14",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "5\n1000000000 1000000000 1000000000 1000000000 0\n",
+    "output" : "4999999999\n",
+    "index" : 3,
+    "active" : true
+  } ],
+  "location" : "src/KotlinHero_Episode2",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "KotlinHero_Episode2.TaskB",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.09.09",
+  "contestName" : "Kotlin Heroes: Episode 2",
+  "truncate" : true,
+  "inputClass" : "java.util.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

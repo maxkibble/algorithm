@@ -1,0 +1,36 @@
+{
+  "name" : "B - Two-gram",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "7\nABACABA\n",
+    "output" : "AB",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "5\nZZZAA\n",
+    "output" : "ZZ",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/KotlinHero_Practice2",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "KotlinHero_Practice2.TaskB",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.09.05",
+  "contestName" : "Kotlin Heroes: Practice 2",
+  "truncate" : false,
+  "inputClass" : "java.util.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

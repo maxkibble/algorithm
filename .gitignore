@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# Codeforces
+codeforces/solutions/.idea/
+codeforces/solutions/out/
+codeforces/solutions/output/
+codeforces/solutions/*.iml
+

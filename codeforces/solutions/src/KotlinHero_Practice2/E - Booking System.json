@@ -1,0 +1,31 @@
+{
+  "name" : "E - Booking System",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "3\n10 50\n2 100\n5 30\n3\n4 6 9\n",
+    "output" : "2 130\n2 1\n3 2\n",
+    "index" : 0,
+    "active" : true
+  } ],
+  "location" : "src/KotlinHero_Practice2",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "KotlinHero_Practice2.TaskE",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.09.05",
+  "contestName" : "Kotlin Heroes: Practice 2",
+  "truncate" : false,
+  "inputClass" : "java.util.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}
