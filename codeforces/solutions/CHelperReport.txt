@@ -1,2 +1,0 @@
-40 src/KotlinHero_Practice2/G - Hiking.json
-0
