@@ -7,7 +7,12 @@
   "output" : {
     "type" : "STANDARD"
   },
-  "tests" : [ ],
+  "tests" : [ {
+    "input" : "5\n1 2 3 2 1\n",
+    "output" : "RBBBG\n",
+    "index" : 0,
+    "active" : true
+  } ],
   "location" : "src/KotlinHero_Episode2",
   "vmArgs" : "-Xmx256M",
   "mainClass" : "Main",

@@ -3,7 +3,6 @@ import java.io.IOException
 import java.io.InputStream
 import java.io.PrintWriter
 import java.util.Scanner
-import java.util.Collections
 import java.util.ArrayList
 
 /**
@@ -13,60 +12,60 @@ import java.util.ArrayList
  * @author maxkibble
  */
 
-fun main(args: Array<String>) {
-    val inputStream = System.`in`
-    val outputStream = System.out
-    val `in` = Scanner(inputStream)
-    val out = PrintWriter(outputStream)
-    solve(1, `in`, out)
-    out.close()
-}
+val maxn = 200005
 
-fun solve(testNumber: Int, `in`: Scanner, out: PrintWriter) {
-    val n = `in`.nextInt()
-    var k = `in`.nextLong()
-    val items = ArrayList<Item>()
-    var sa: Long = 0
-    var sb: Long = 0
+fun main() {
+    val n = readLine()!!.toInt()
+    var a = readLine()!!.split(" ").map { it.toInt() }
+    var c = IntArray(maxn)
+    for (x in a) c[x]++
+    var lo = 0
+    var hi = n
+    while (lo < hi) {
+        val mid = (lo + hi + 1) / 2
+        var ok = true
+        for (i in 1..mid) {
+            if (c[i] != 2) {
+                ok = false
+                break
+            }
+        }
+        if (ok) {
+            val p = ArrayList<Int>()
+            var y = 0
+            val cc = IntArray(mid + 1)
+            for (v in a) {
+                if (v <= mid) {
+                    if (cc[v] == 0) {
+                        p.add(v)
+                    } else {
+                        if (p[y] != v) {
+                            ok = false
+                            break
+                        }
+                        y += 1
+                    }
+                    cc[v] += 1
+                }
+            }
+        }
+        if (ok)
+            lo = mid
+        else
+            hi = mid - 1
+    }
+    val sb = StringBuilder()
+    val cc = IntArray(100005)
     for (i in 0 until n) {
-        val x = `in`.nextInt()
-        val y = `in`.nextInt()
-        val z = `in`.nextInt()
-        sa += x.toLong()
-        sb += y.toLong()
-        items.add(Item(x, y, z))
+        if (a[i] > lo) {
+            sb.append('B')
+            continue
+        }
+        if (cc[a[i]] == 0)
+            sb.append('R')
+        else
+            sb.append('G')
+        cc[a[i]]++
     }
-    if (sa > k || sb < k) {
-        out.println(-1)
-        return
-    }
-    k -= sa
-    var ans: Long = 0
-    Collections.sort(items)
-    for (item in items) {
-        val d = Math.min(k, item.b - item.a)
-        ans += (item.a + d) * item.c
-        k -= d
-    }
-    out.println(ans)
+    println(sb)
 }
-
-
-
-class Item(x: Int, y: Int, z: Int) : Comparable<Item> {
-    var a: Long = 0
-    var b: Long = 0
-    var c: Long = 0
-
-    init {
-        a = x.toLong()
-        b = y.toLong()
-        c = z.toLong()
-    }
-
-    override fun compareTo(o: Item): Int {
-        return if (c - o.c < 0) -1 else 1
-    }
-
-}
-
